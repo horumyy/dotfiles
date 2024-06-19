@@ -1,2 +1,7 @@
+.DS_Store
+
+/omz/.DS_Store
+
 /zsh/.env
 /zsh/.zsh_history
+/zsh/.DS_Store
