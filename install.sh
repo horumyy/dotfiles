@@ -3,6 +3,7 @@
 OS="$(uname -s)"
 
 # Common operations for Linux and macOS
+source "$HOME/.dotfiles/zsh/.zshenv"
 rm -rf "$XDG_CONFIG_HOME/zsh"
 ln -s "$DOTFILES/zsh" "$XDG_CONFIG_HOME"
 
@@ -20,6 +21,9 @@ case "$OS" in
 
         rm -rf "$XDG_CONFIG_HOME/skhd"
         ln -s "$DOTFILES/skhd" "$XDG_CONFIG_HOME"
+
+        rm -rf "$XDG_CONFIG_HOME/omz"
+        ln -s "$DOTFILES/omz" "$XDG_CONFIG_HOME"
         ;;
     *)
         echo "Unsupported OS: $OS"
