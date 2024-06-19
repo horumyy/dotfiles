@@ -1,5 +1,5 @@
 # IMPORT ENV KEYS
-source ./.env
+source "$HOME/.dotfiles/zsh/.env"
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # Path to your oh-my-zsh installation.
