@@ -7,6 +7,9 @@ source "$HOME/.dotfiles/zsh/.zshenv"
 rm -rf "$XDG_CONFIG_HOME/zsh"
 ln -s "$DOTFILES/zsh" "$XDG_CONFIG_HOME"
 
+rm -rf "$XDG_CONFIG_HOME/nvim"
+ln -s "$DOTFILES/nvim" "$XDG_CONFIG_HOME"
+
 rm -rf "$HOME/.zshenv"
 ln -s "$DOTFILES/zsh/.zshenv" "$HOME"
 
