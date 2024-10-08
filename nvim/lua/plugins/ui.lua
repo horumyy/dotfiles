@@ -2,6 +2,24 @@ return {
   {
     "nvimdev/dashboard-nvim",
     lazy = false, -- Ensure dashboard-nvim is not lazy-loaded
+    config = function()
+      require("dashboard").setup({
+        theme = "doom",
+        config = {
+          header = {
+            "Welcome to Neovim",
+            "Enjoy your coding session!",
+          },
+          center = {
+            { icon = "  ", desc = "Recently opened files", action = "Telescope oldfiles" },
+            { icon = "  ", desc = "Find File          ", action = "Telescope find_files" },
+            { icon = "  ", desc = "File Browser       ", action = "Telescope file_browser" },
+            { icon = "  ", desc = "Find Word          ", action = "Telescope live_grep" },
+          },
+          footer = { "Have a great day!" },
+        },
+      })
+    end,
     opts = function()
       local logo = [[
          ██╗      █████╗ ███████╗██╗   ██╗██╗   ██╗██╗███╗   ███╗          Z
