@@ -114,6 +114,7 @@ source $ZSH/oh-my-zsh.sh
 alias bupdate="brew update && arch -arm64 brew upgrade"
 alias pls="sudo"
 alias build="yarn run build && open raycast://confetti"
+alias n="nvim"
 
 PROMPT="%F{cyan}Jorge %f%F{magenta}=^._.^=%f%B%F{cyan} @ %f%b%F{magenta}%~%f%F{magenta} | %f"
 RPROMPT=\$vcs_info_msg_0_
