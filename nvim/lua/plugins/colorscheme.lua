@@ -23,8 +23,30 @@ return {
         orange = { "#B6D9FF", "232" },
       }
 
+      -- Function to apply custom highlights
+      local function apply_custom_highlights()
+        -- Add type annotations for Lua Language Server
+        ---@type table
+        local config = vim.fn["sonokai#get_configuration"]()
+        ---@type table
+        local palette = vim.fn["sonokai#get_palette"](config.style, config.colors_override)
+        ---@type function
+        local set_hl = vim.fn["sonokai#highlight"]
+
+        -- Apply custom highlights
+        set_hl("DashboardHeader", palette.cyan, palette.none) -- Changed background to none
+        -- Ensure highlights are applied immediately
+        vim.cmd("redraw")
+      end
       -- Set the colorscheme
       vim.cmd.colorscheme("sonokai")
+
+      apply_custom_highlights()
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        group = vim.api.nvim_create_augroup("custom_highlights_sonokai", {}),
+        pattern = "sonokai",
+        callback = apply_custom_highlights,
+      })
     end,
   },
 }
