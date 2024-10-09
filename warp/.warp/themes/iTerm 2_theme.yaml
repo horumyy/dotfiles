@@ -1,0 +1,55 @@
+---
+background: "#000000"
+accent: "#F5A9B8"
+foreground: "#bbbbbb"
+cursor: "#bbbbbb"
+details:
+  custom:
+    overlay_opacity: 20
+    outline_opacity: 12
+    main_text_opacity: 90
+    sub_text_opacity: 60
+    hint_text_opacity: 40
+    disabled_text_opacity: 20
+    foreground_button_opacity: 30
+    accent_button_opacity: 0
+    button_hover_opacity: 10
+    button_click_opacity: 20
+    accent_overlay_opacity: 30
+    light_overlay_opacity: 3
+    block_selection_opacity: 10
+    find_bar_button_selection_opacity: 25
+    split_pane_divider_opacity: 20
+    active_pane_border_opacity: 70
+    restored_blocks_overlay_opacity: 10
+    restored_ai_blocks_overlay_opacity: 15
+    keybinding_row_overlay_opacity: 40
+    voltron_search: 20
+    voltron_sidebar: 10
+    welcome_tips_completion_overlay_opacity: 90
+    sign_in_common_questions_overlay_opacity: 98
+    referral_rewards_footer_opacity: 10
+    resource_center_background_opacity: 8
+    resource_center_item_overlay_opacity: 50
+    inactive_pane_overlay_opacity: 12
+    block_banner_opacity: 15
+terminal_colors:
+  normal:
+    black: "#000000"
+    red: "#bb0000"
+    green: "#00bb00"
+    yellow: "#bbbb00"
+    blue: "#0000bb"
+    magenta: "#bb00bb"
+    cyan: "#00bbbb"
+    white: "#bbbbbb"
+  bright:
+    black: "#555555"
+    red: "#ff5555"
+    green: "#55ff55"
+    yellow: "#ffff55"
+    blue: "#5555ff"
+    magenta: "#ff55ff"
+    cyan: "#55ffff"
+    white: "#ffffff"
+name: Imported iTerm Theme
