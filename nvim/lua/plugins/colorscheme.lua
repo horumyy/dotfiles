@@ -18,7 +18,7 @@ return {
         blue = { "#9ac5ff", "117" },
         magenta = { "#fb6fa9", "203" },
         cyan = { "#b6d9ff", "117" },
-        fg = { "#878ba6", "246" },
+        fg = { "#ffffff", "246" },
         gray = { "#4f5472", "237" },
         orange = { "#B6D9FF", "232" },
       }
