@@ -116,7 +116,7 @@ alias pls="sudo"
 alias build="yarn run build && open raycast://confetti"
 alias n="nvim"
 
-PROMPT="%F{cyan}Jorge %f%F{magenta}=^._.^=%f%B%F{cyan} @ %f%b%F{magenta}%~%f%F{magenta} | %f"
+PROMPT="%F{cyan}Jorge %f%F{175}=^._.^=%f%B%F{cyan} @ %f%b%F{175}%~%f%F{175} | %f"
 RPROMPT=\$vcs_info_msg_0_
 
 eval $(thefuck --alias)
