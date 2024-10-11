@@ -14,11 +14,22 @@ rm -rf "$HOME/.zshenv"
 ln -s "$DOTFILES/zsh/.zshenv" "$HOME"
 
 case "$OS" in
-# Linux)
-#     mkdir -p "$XDG_DATA_HOME"
-#     cp -rf "$DOTFILES/fonts" "$XDG_DATA_HOME/fonts"
-#     ;;
 Darwin)
+  # Install Homebrew
+  if ! command -v brew &> /dev/null; then
+    echo "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+
+  if command -v brew &> /dev/null; then
+    echo "Brew found! Updating..."
+    /bin/bash -c "brew update"
+  fi
+
+  # Install packages
+  echo "Installing packages..."
+  brew bundle --file="$DOTFILES/Brewfile"
+
   rm -rf "$XDG_CONFIG_HOME/yabai"
   ln -s "$DOTFILES/yabai" "$XDG_CONFIG_HOME"
 
