@@ -3,7 +3,7 @@ source "$HOME/.dotfiles/zsh/.env"
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.config/omz/.oh-my-zsh"
 export PATH=$PATH:~/.yarn/bin
 
 # Set name of the theme to load --- if set to "random", it will

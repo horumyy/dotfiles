@@ -6,3 +6,4 @@
 /zsh/.zsh_history
 /zsh/.DS_Store
 .aider*
+Brewfile.lock.json
