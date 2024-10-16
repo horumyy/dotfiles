@@ -1240,6 +1240,12 @@
         "options": {
           "full_name": "warp"
         }
+      },
+      "raycast": {
+        "version": "1.84.3",
+        "options": {
+          "full_name": "raycast"
+        }
       }
     }
   },
