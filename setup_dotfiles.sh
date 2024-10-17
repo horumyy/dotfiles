@@ -83,5 +83,3 @@ Darwin)
 esac
 
 echo "Dotfiles setup completed!"
-echo "Note: You may need to update your .zshrc to source Oh My Zsh from: $XDG_CONFIG_HOME/oh-my-zsh/oh-my-zsh.sh"
-
