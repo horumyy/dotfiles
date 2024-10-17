@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.config/oh-my-zsh"
+export ZSH="$HOME/.config/oh-my-zsh/"
 export PATH=$PATH:~/.yarn/bin
-
+ 
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )

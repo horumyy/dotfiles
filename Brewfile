@@ -32,6 +32,7 @@ brew "ripgrep"
 brew "telnet"
 brew "thefuck"
 brew "utf8proc", args: ["HEAD"]
+brew "tmux"
 brew "wget"
 brew "yarn"
 brew "yt-dlp"

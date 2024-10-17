@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 OS="$(uname -s)"
 
@@ -24,6 +24,7 @@ mkdir -p "$XDG_CONFIG_HOME"
 create_symlink "$DOTFILES/zsh" "$XDG_CONFIG_HOME/zsh"
 create_symlink "$DOTFILES/nvim" "$XDG_CONFIG_HOME/nvim"
 create_symlink "$DOTFILES/zsh/.zshenv" "$HOME/.zshenv"
+create_symlink "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
 
 # Install Rust and Cargo
 if ! command -v cargo &>/dev/null; then
@@ -37,6 +38,9 @@ if [ ! -d "$XDG_CONFIG_HOME/oh-my-zsh" ]; then
   echo "Installing Oh My Zsh..."
   export ZSH="$XDG_CONFIG_HOME/oh-my-zsh"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
+
+  # Source Oh My Zsh
+  source "$XDG_CONFIG_HOME/oh-my-zsh/oh-my-zsh.sh"
 fi
 
 case "$OS" in
@@ -67,6 +71,10 @@ Darwin)
   # Install packages
   echo "Installing packages..."
   brew bundle --file="$DOTFILES/Brewfile"
+
+  # Apply tmux config
+  echo "Applying tmux configs..."
+  tmux source-file ~/.tmux.conf && echo "Applied tmux config correctly"
 
   # Create additional symlinks for macOS
   create_symlink "$DOTFILES/yabai" "$XDG_CONFIG_HOME/yabai"
