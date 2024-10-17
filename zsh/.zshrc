@@ -115,6 +115,7 @@ alias bupdate="brew update && arch -arm64 brew upgrade"
 alias pls="sudo"
 alias build="yarn run build && open raycast://confetti"
 alias n="nvim"
+alias ls='ls -G'
 
 PROMPT="%F{cyan}horumy %f%F{175}=^._.^=%f%B%F{cyan} @ %f%b%F{175}%~%f%F{175} | %f"
 eval $(thefuck --alias)
