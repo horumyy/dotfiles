@@ -82,7 +82,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#dfafff"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git branch zsh-autosuggestions)
+plugins=(git gh brew branch zsh-autosuggestions)
 
 source $ZSH
 
