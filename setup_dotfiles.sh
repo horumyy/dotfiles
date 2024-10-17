@@ -39,9 +39,6 @@ if [ ! -d "$XDG_CONFIG_HOME/oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 fi
 
-# Ensure Oh My Zsh is symlinked correctly
-create_symlink "$XDG_CONFIG_HOME/oh-my-zsh" "$XDG_CONFIG_HOME/omz/.oh-my-zsh"
-
 case "$OS" in
 Darwin)
   # Set up Homebrew environment
