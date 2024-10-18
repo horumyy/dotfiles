@@ -14,7 +14,7 @@ zstyle ':vcs_info:*' check-for-changes true
 ZSH_THEME="robbyrussell"
 
 # Format autosuggestion style
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#dfafff"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#E3BFD4"
 
 plugins=(git gh brew branch tmux)
 
