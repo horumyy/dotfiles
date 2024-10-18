@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/bundle": {
-        "revision": "19b9c3392b105a54e9cbcd285a9f4c6d1f4415c5"
+        "revision": "a5d95021e437e3c5cc52d7b194bfaedefc91f942"
       },
       "homebrew/cask-fonts": {
         "revision": "0ed20f35d21ebc3f4f829689b101078718ad5ce1"
@@ -1402,6 +1402,20 @@
             }
           }
         }
+      },
+      "zsh-autosuggestions": {
+        "version": "0.7.0",
+        "bottle": {
+          "rebuild": 3,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "all": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/zsh-autosuggestions/blobs/sha256:56550795abab132ef15f7dd1ec2632e0db3a87c3234c0db5ce6d17f03137b7f4",
+              "sha256": "56550795abab132ef15f7dd1ec2632e0db3a87c3234c0db5ce6d17f03137b7f4"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -1430,7 +1444,7 @@
         }
       },
       "warp": {
-        "version": "0.2024.10.08.08.02.stable_02",
+        "version": "0.2024.10.15.08.02.stable_03",
         "options": {
           "full_name": "warp"
         }
@@ -1442,7 +1456,7 @@
         }
       },
       "displaylink": {
-        "version": "1.10.3,2024-08",
+        "version": "1.11,2024-10",
         "options": {
           "full_name": "displaylink"
         }
@@ -1482,7 +1496,7 @@
   "system": {
     "macos": {
       "sequoia": {
-        "HOMEBREW_VERSION": "4.4.1-49-gaf4ae1e",
+        "HOMEBREW_VERSION": "4.4.1-51-g215064e",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "16.0.0.0.1.1724870825",

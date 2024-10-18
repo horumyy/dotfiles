@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.config/oh-my-zsh/"
+export ZSH="$HOME/.config/oh-my-zsh"
 export PATH=$PATH:~/.yarn/bin
  
 autoload -Uz vcs_info
@@ -82,9 +82,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#dfafff"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gh brew branch zsh-autosuggestions)
+plugins=(git gh brew branch tmux)
 
-source $ZSH
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -129,4 +129,5 @@ eval "$(pyenv init -)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh

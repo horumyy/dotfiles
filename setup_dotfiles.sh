@@ -36,7 +36,7 @@ fi
 # Install Oh My Zsh
 if [ ! -d "$XDG_CONFIG_HOME/oh-my-zsh" ]; then
   echo "Installing Oh My Zsh..."
-  export ZSH="$XDG_CONFIG_HOME/oh-my-zsh"
+  export ZSH="$XDG_CONFIG_HOME/oh-my-zsh" 
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 
   # Source Oh My Zsh
