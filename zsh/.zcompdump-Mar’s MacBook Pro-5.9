@@ -1,6 +1,7 @@
-#files: 967	version: 5.9
+#files: 977	version: 5.9
 
 _comps=(
+''\''brew' '_brew_services'
 '-' '_precommand'
 '-array-value-' '_value'
 '-assign-parameter-' '_assign'
@@ -199,6 +200,7 @@ _comps=(
 'bpython3-gtk' '_bpython'
 'bpython3-urwid' '_bpython'
 'brctl' '_brctl'
+'brew' '_brew'
 'bsdconfig' '_bsdconfig'
 'bsdgrep' '_grep'
 'bsdinstall' '_bsdinstall'
@@ -277,6 +279,7 @@ _comps=(
 'cmp' '_cmp'
 'co' '_rcs'
 'code' '_code'
+'colima' '_colima'
 'column' '_column'
 'comb' '_sccs'
 'combine' '_imagemagick'
@@ -389,6 +392,8 @@ _comps=(
 'dnf-2' '_dnf'
 'dnf-3' '_dnf'
 'doas' '_doas'
+'docker' '_docker'
+'dockerd' '_docker'
 'domainname' '_yp'
 'dos2unix' '_dos2unix'
 'dosdel' '_floppy'
@@ -584,11 +589,6 @@ _comps=(
 'ginstall' '_install'
 'git' '_git'
 'git-buildpackage' '_git-buildpackage'
-'git-cvsserver' '_git'
-'git-receive-pack' '_git'
-'git-shell' '_git'
-'git-upload-archive' '_git'
-'git-upload-pack' '_git'
 'gitk' '_git'
 'gjoin' '_join'
 'glance' '_openstack'
@@ -836,6 +836,7 @@ _comps=(
 'light' '_webbrowser'
 'lighty-disable-mod' '_lighttpd'
 'lighty-enable-mod' '_lighttpd'
+'limactl' '_limactl'
 'limit' '_limit'
 'links' '_links'
 'links2' '_links'
@@ -1246,6 +1247,7 @@ _comps=(
 'reprepro' '_reprepro'
 'restart' '_initctl'
 'retawq' '_webbrowser'
+'rg' '_rg'
 'rgrep' '_grep'
 'rgview' '_vim'
 'rgvim' '_vim'
@@ -1315,6 +1317,7 @@ _comps=(
 'seq' '_seq'
 'serialver' '_java'
 'service' '_service'
+'services'\''' '_brew_services'
 'set' '_set'
 'setfacl' '_setfacl'
 'setfacl.exe' '_setfacl'
@@ -1453,7 +1456,6 @@ _comps=(
 'texindex' '_texinfo'
 'tg' '_topgit'
 'tidy' '_tidy'
-'tig' '_git'
 'time' '_precommand'
 'timeout' '_timeout'
 'times' '_nothing'
@@ -1673,6 +1675,7 @@ _comps=(
 'ypset' '_yp'
 'ypwhich' '_yp'
 'ypxfr' '_yp'
+'yt-dlp' '_yt-dlp'
 'ytalk' '_other_accounts'
 'yum' '_yum'
 'yumdb' '_yum'
@@ -1839,7 +1842,9 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _gh _SUSEconfig __arguments _a2ps _a2utils \
+autoload -Uz _gh _brew _brew_services _colima _docker \
+            _gh _git _limactl _luarocks _rg \
+            _yt-dlp _SUSEconfig __arguments _a2ps _a2utils \
             _aap _abcde _absolute_command_paths _ack _acpi \
             _acpitool _acroread _adb _add-zle-hook-widget _add-zsh-hook \
             _alias _aliases _all_labels _all_matches _alsa-utils \
@@ -2039,4 +2044,4 @@ typeset -gUa _comp_assocs
 _comp_assocs=( '' )
 
 #omz revision: 067558da9274986d326533daca047bbcb01f2451
-#omz fpath: /Users/horumy/.config/oh-my-zsh/plugins/tmux /Users/horumy/.config/oh-my-zsh/plugins/branch /Users/horumy/.config/oh-my-zsh/plugins/brew /Users/horumy/.config/oh-my-zsh/plugins/gh /Users/horumy/.config/oh-my-zsh/plugins/git /Users/horumy/.config/oh-my-zsh/functions /Users/horumy/.config/oh-my-zsh/completions /Users/horumy/.config/oh-my-zsh/custom/functions /Users/horumy/.config/oh-my-zsh/custom/completions /Users/horumy/.config/oh-my-zsh/cache/completions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/5.9/functions
+#omz fpath: /Users/horumy/.config/oh-my-zsh/plugins/tmux /Users/horumy/.config/oh-my-zsh/plugins/branch /Users/horumy/.config/oh-my-zsh/plugins/brew /Users/horumy/.config/oh-my-zsh/plugins/gh /Users/horumy/.config/oh-my-zsh/plugins/git /Users/horumy/.config/oh-my-zsh/functions /Users/horumy/.config/oh-my-zsh/completions /Users/horumy/.config/oh-my-zsh/custom/functions /Users/horumy/.config/oh-my-zsh/custom/completions /Users/horumy/.config/oh-my-zsh/cache/completions /opt/homebrew/share/zsh/site-functions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/5.9/functions
