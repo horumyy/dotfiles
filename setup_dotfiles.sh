@@ -97,8 +97,9 @@ echo "Installing SbarLua..."
 echo "SbarLua installed successfully!"
   # Apply tmux config
   echo "Applying tmux configs..."
+ tmux new-session -d -s start-session
   tmux source-file ~/.tmux.conf && echo "Applied tmux config correctly"
-
+  tmux kill-session -t start-session
   ;;
 *)
   echo "Unsupported OS: $OS"
