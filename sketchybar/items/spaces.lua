@@ -14,7 +14,7 @@ for i = 1, 10, 1 do
 			padding_left = 15,
 			padding_right = 8,
 			color = colors.white,
-			highlight_color = colors.blue,
+			highlight_color = colors.red,
 		},
 		label = {
 			padding_right = 20,
@@ -72,10 +72,10 @@ for i = 1, 10, 1 do
 		space:set({
 			icon = { highlight = selected },
 			label = { highlight = selected },
-			background = { border_color = selected and colors.black or colors.bg2 },
+			background = { border_color = selected and colors.blue or colors.bg2 },
 		})
 		space_bracket:set({
-			background = { border_color = selected and colors.grey or colors.bg2 },
+			background = { border_color = selected and colors.blue or colors.bg2 },
 		})
 	end)
 
