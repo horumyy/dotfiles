@@ -1589,6 +1589,104 @@
       "felixkratz/formulae/sketchybar": {
         "version": "2.21.0",
         "bottle": false
+      },
+      "switchaudio-osx": {
+        "version": "1.2.2",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_sequoia": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/switchaudio-osx/blobs/sha256:d8d4c24b4029b788cdfc13bf36ddb650d220fd6fb43df0d60131c47034734f51",
+              "sha256": "d8d4c24b4029b788cdfc13bf36ddb650d220fd6fb43df0d60131c47034734f51"
+            },
+            "arm64_sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/switchaudio-osx/blobs/sha256:4e6292b5cbda7b5b7dc412d6f787903cb9cdab68ad75c1a8ac0bf3e63985d782",
+              "sha256": "4e6292b5cbda7b5b7dc412d6f787903cb9cdab68ad75c1a8ac0bf3e63985d782"
+            },
+            "arm64_ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/switchaudio-osx/blobs/sha256:bb34fa77825e8c7bbcceda397eea3155196039fcbafcd4e6ba419694d3f3d3b0",
+              "sha256": "bb34fa77825e8c7bbcceda397eea3155196039fcbafcd4e6ba419694d3f3d3b0"
+            },
+            "arm64_monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/switchaudio-osx/blobs/sha256:4ca3cb57b3850bc4a520e1751d4e1e9ae224df74c8c74aff0f0faba4b3b6a444",
+              "sha256": "4ca3cb57b3850bc4a520e1751d4e1e9ae224df74c8c74aff0f0faba4b3b6a444"
+            },
+            "arm64_big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/switchaudio-osx/blobs/sha256:e91921e9b3d31fbf9ee65fabf606c946a234d80af6abd418f0c68152a066d974",
+              "sha256": "e91921e9b3d31fbf9ee65fabf606c946a234d80af6abd418f0c68152a066d974"
+            },
+            "sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/switchaudio-osx/blobs/sha256:609bfbee688f729a9451de9d76b80d403381f9448d15a5ab6f5dd3e16e05a945",
+              "sha256": "609bfbee688f729a9451de9d76b80d403381f9448d15a5ab6f5dd3e16e05a945"
+            },
+            "ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/switchaudio-osx/blobs/sha256:795efb36156fe00438b1843dfd5c3d3463e3c6294b8ea96f89052b03795bcefb",
+              "sha256": "795efb36156fe00438b1843dfd5c3d3463e3c6294b8ea96f89052b03795bcefb"
+            },
+            "monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/switchaudio-osx/blobs/sha256:17971fd5701812aa360ed120338fa4a9ddede0c8ec503144548614c2ebe930d0",
+              "sha256": "17971fd5701812aa360ed120338fa4a9ddede0c8ec503144548614c2ebe930d0"
+            },
+            "big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/switchaudio-osx/blobs/sha256:a5c74d8fd8754d57165d121f02ffa338a6b721432d5694f82c555d877a946d5f",
+              "sha256": "a5c74d8fd8754d57165d121f02ffa338a6b721432d5694f82c555d877a946d5f"
+            }
+          }
+        }
+      },
+      "nowplaying-cli": {
+        "version": "1.2.1",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_sequoia": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/nowplaying-cli/blobs/sha256:1a4b77d57e7d151e6fc408096e76e2f6273a0187e974778bec58ff4417dac115",
+              "sha256": "1a4b77d57e7d151e6fc408096e76e2f6273a0187e974778bec58ff4417dac115"
+            },
+            "arm64_sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/nowplaying-cli/blobs/sha256:028c91c0152017e30caa8f006961034ad91faedb2f92fb76d9d3a724775bf2a0",
+              "sha256": "028c91c0152017e30caa8f006961034ad91faedb2f92fb76d9d3a724775bf2a0"
+            },
+            "arm64_ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/nowplaying-cli/blobs/sha256:3d98330f2152a1dd02ecc8a515f5ff56d2e780196e705a8367275d8ce043552c",
+              "sha256": "3d98330f2152a1dd02ecc8a515f5ff56d2e780196e705a8367275d8ce043552c"
+            },
+            "arm64_monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/nowplaying-cli/blobs/sha256:5fbe78e350e35164e78a14b0cb853143c00824c612813d4cdd78afaa1675709e",
+              "sha256": "5fbe78e350e35164e78a14b0cb853143c00824c612813d4cdd78afaa1675709e"
+            },
+            "sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/nowplaying-cli/blobs/sha256:9bdf6c603add430676f621c00b5d6c944819fb0851cb419dacda90eae42bcb43",
+              "sha256": "9bdf6c603add430676f621c00b5d6c944819fb0851cb419dacda90eae42bcb43"
+            },
+            "ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/nowplaying-cli/blobs/sha256:0d06f10462257cfd5c96e7e029db043499d9fffae9cb6f843714e7e115dc4288",
+              "sha256": "0d06f10462257cfd5c96e7e029db043499d9fffae9cb6f843714e7e115dc4288"
+            },
+            "monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/nowplaying-cli/blobs/sha256:4a6d9fdc2681a4912562186b4ee2c0965e56c0ec2c9189314afb505424745bb3",
+              "sha256": "4a6d9fdc2681a4912562186b4ee2c0965e56c0ec2c9189314afb505424745bb3"
+            }
+          }
+        }
       }
     },
     "cask": {

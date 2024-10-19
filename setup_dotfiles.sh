@@ -87,23 +87,14 @@ echo "Remember to disable SIP and restart your Mac"
 
   # Install sketchybar-app-font
   echo "Installing sketchybar-app-font..."
-   cd "$DOTFILES"
-  if [ ! -d "sketchybar-app-font" ]; then
-    echo "Cloning sketchybar-app-font repository..."
-    git clone https://github.com/kvndrsslr/sketchybar-app-font.git
-  fi
-
-  cd "sketchybar-app-font"
-  echo "Installing sketchybar-app-font dependencies..."
-  pnpm install
-
-  echo "Building and installing sketchybar-app-font..."
-  pnpm run build:install
-
-  cd ..
-  rm -rf "sketchybar-app-font"
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.5/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
   echo "sketchybar-app-font installed successfully!"
 
+
+  #installing SbarLua
+echo "Installing SbarLua..."
+  (git clone https://github.com/FelixKratz/SbarLua.git /tmp/SbarLua && cd /tmp/SbarLua/ && make install && rm -rf /tmp/SbarLua/)
+echo "SbarLua installed successfully!"
   # Apply tmux config
   echo "Applying tmux configs..."
   tmux source-file ~/.tmux.conf && echo "Applied tmux config correctly"
