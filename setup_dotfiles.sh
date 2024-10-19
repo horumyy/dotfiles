@@ -72,15 +72,39 @@ Darwin)
   # Install packages
   echo "Installing packages..."
   brew bundle --file="$DOTFILES/Brewfile"
+  echo "Packages installed successfully!"
+
+  # Create additional symlinks for macOS
+  echo "Creating additional symlinks for macOS..."
+  create_symlink "$DOTFILES/yabai" "$XDG_CONFIG_HOME/yabai"
+  create_symlink "$DOTFILES/skhd" "$XDG_CONFIG_HOME/skhd"
+  create_symlink "$DOTFILES/warp/.warp" "$HOME/.warp"
+  create_symlink "$DOTFILES/sketchybar" "$XDG_CONFIG_HOME/sketchybar"
+  echo "Additional symlinks created successfully!"
+
+  # Install sketchybar-app-font
+  echo "Installing sketchybar-app-font..."
+   cd "$DOTFILES"
+  if [ ! -d "sketchybar-app-font" ]; then
+    echo "Cloning sketchybar-app-font repository..."
+    git clone https://github.com/kvndrsslr/sketchybar-app-font.git
+  fi
+
+  cd "sketchybar-app-font"
+  echo "Installing sketchybar-app-font dependencies..."
+  pnpm install
+
+  echo "Building and installing sketchybar-app-font..."
+  pnpm run build:install
+
+  cd ..
+  rm -rf "sketchybar-app-font"
+  echo "sketchybar-app-font installed successfully!"
 
   # Apply tmux config
   echo "Applying tmux configs..."
   tmux source-file ~/.tmux.conf && echo "Applied tmux config correctly"
 
-  # Create additional symlinks for macOS
-  create_symlink "$DOTFILES/yabai" "$XDG_CONFIG_HOME/yabai"
-  create_symlink "$DOTFILES/skhd" "$XDG_CONFIG_HOME/skhd"
-  create_symlink "$DOTFILES/warp/.warp" "$HOME/.warp"
   ;;
 *)
   echo "Unsupported OS: $OS"
