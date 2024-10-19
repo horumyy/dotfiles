@@ -77,6 +77,9 @@ Darwin)
   # Create additional symlinks for macOS
   echo "Creating additional symlinks for macOS..."
   create_symlink "$DOTFILES/yabai" "$XDG_CONFIG_HOME/yabai"
+  echo "Running yabai installation requirements..."
+sudo nvram boot-args=-arm64e_preview_abi
+echo "Remember to disable SIP and restart your Mac"
   create_symlink "$DOTFILES/skhd" "$XDG_CONFIG_HOME/skhd"
   create_symlink "$DOTFILES/warp/.warp" "$HOME/.warp"
   create_symlink "$DOTFILES/sketchybar" "$XDG_CONFIG_HOME/sketchybar"
