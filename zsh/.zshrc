@@ -27,6 +27,7 @@ alias n="nvim"
 alias ls='ls -G'
 alias neofetch='fastfetch --wm-detect-plugin'
 alias fastfetch='fastfetch --wm-detect-plugin'
+alias yabaii='~/.config/yabai/yabairc && yabai --restart-service'
 
 PROMPT="%F{cyan}horumy %f%F{175}=^._.^=%f%B%F{cyan} @ %f%b%F{175}%~%f%F{175} | %f"
 RPROMPT=\$vcs_info_msg_0_
