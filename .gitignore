@@ -3,6 +3,7 @@
 /zsh/.env
 /zsh/.zsh_history
 /zsh/.DS_Store
+/zsh/.zcompdump*
 .aider*
 Brewfile.lock.json
 
