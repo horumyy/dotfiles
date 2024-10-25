@@ -43,6 +43,9 @@ keymap.set("n", "<C-S-k>", "<C-w>+")
 keymap.set("n", "<C-S-j>", "<C-w>-")
 
 -- Diagnostics
+keymap.set("n", "<Leader>e", function()
+  vim.diagnostic.open_float(0, { scope = "line" })
+end, opts)
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)
