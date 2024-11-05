@@ -16,7 +16,7 @@ local cal = sbar.add("item", {
 	label = {
 		color = colors.blue,
 		padding_right = 8,
-		width = 49,
+		width = 59,
 		align = "right",
 		font = { family = settings.font.numbers },
 	},
@@ -44,7 +44,23 @@ sbar.add("bracket", { cal.name }, {
 sbar.add("item", { position = "right", width = settings.group_paddings })
 
 cal:subscribe({ "forced", "routine", "system_woke" }, function(env)
-	cal:set({ icon = os.date("%a. %d %b."), label = os.date("%H:%M") })
+	local date = os.date("*t")
+	local hour = date.hour
+	local am_pm = "AM"
+
+	if hour >= 12 then
+		am_pm = "PM"
+		if hour > 12 then
+			hour = hour - 12
+		end
+	elseif hour == 0 then
+		hour = 12
+	end
+
+	cal:set({
+		icon = os.date("%a. %d %b."),
+		label = string.format("%d:%02d %s", hour, date.min, am_pm),
+	})
 end)
 
 cal:subscribe("mouse.clicked", function(env)
