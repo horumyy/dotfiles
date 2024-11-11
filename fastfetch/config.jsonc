@@ -13,7 +13,8 @@
     "cpu",
     "memory",
     "separator",
-    "break",
+    "media",
+    "separator",
     "colors",
   ],
   "logo": {
