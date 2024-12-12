@@ -23,6 +23,7 @@ mkdir -p "$XDG_CONFIG_HOME"
 # Common operations for Linux and macOS
 create_symlink "$DOTFILES/zsh" "$XDG_CONFIG_HOME/zsh"
 create_symlink "$DOTFILES/nvim" "$XDG_CONFIG_HOME/nvim"
+create_symlink "$DOTFILES/.nvm" "$HOME/.nvm"
 create_symlink "$DOTFILES/fastfetch" "$XDG_CONFIG_HOME/fastfetch"
 create_symlink "$DOTFILES/zsh/.zshenv" "$HOME/.zshenv"
 create_symlink "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
