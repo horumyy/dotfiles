@@ -41,7 +41,7 @@ require("lazy").setup({
   dev = {
     path = "~/.ghq/github.com",
   },
-  checker = { enabled = true },
+  checker = { enabled = false },
   performance = {
     cache = {
       enabled = true,
