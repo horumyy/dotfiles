@@ -1,6 +1,7 @@
 {
   "extras": [
     "lazyvim.plugins.extras.coding.nvim-cmp",
+    "lazyvim.plugins.extras.editor.telescope",
     "lazyvim.plugins.extras.lang.markdown",
     "lazyvim.plugins.extras.ui.treesitter-context"
   ],
