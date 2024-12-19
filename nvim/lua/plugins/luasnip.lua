@@ -1,31 +1,20 @@
 return {
   "L3MON4D3/LuaSnip",
-  keys = function()
-    return {}
-  end,
-  config = function()
-    -- This will ensure LuaSnip completions appear after LSP completions
-    require("cmp").setup({
-      sorting = {
-        priority_weight = 2,
-        comparators = {
-          require("cmp").config.compare.offset,
-          require("cmp").config.compare.exact,
-          require("cmp").config.compare.score,
-          require("cmp").config.compare.kind,
-          require("cmp").config.compare.sort_text,
-          require("cmp").config.compare.length,
-          require("cmp").config.compare.order,
-        },
-      },
-      sources = {
-        { name = "nvim_lsp", priority = 1000 },
-        { name = "luasnip", priority = 750 },
-        -- Add other sources with lower priorities
-      },
-    })
-  end,
+  lazy = true,
+  build = (not LazyVim.is_win())
+      and "echo 'NOTE: jsregexp is optional, so not a big deal if it fails to build'; make install_jsregexp"
+    or nil,
   dependencies = {
-    "hrsh7th/nvim-cmp",
+    {
+      "rafamadriz/friendly-snippets",
+      config = function()
+        require("luasnip.loaders.from_vscode").lazy_load()
+        require("luasnip.loaders.from_vscode").lazy_load({ paths = { vim.fn.stdpath("config") .. "/snippets" } })
+      end,
+    },
+  },
+  opts = {
+    history = true,
+    delete_check_events = "TextChanged",
   },
 }
