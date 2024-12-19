@@ -32,23 +32,42 @@ return {
         completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
       },
       preselect = auto_select and cmp.PreselectMode.Item or cmp.PreselectMode.None,
+
       mapping = cmp.mapping.preset.insert({
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
         ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
         ["<C-Space>"] = cmp.mapping.complete(),
-        ["<CR>"] = LazyVim.cmp.confirm({ select = auto_select }),
+        ["<CR>"] = cmp.config.disable, -- Disable default CR behavior
         ["<C-y>"] = LazyVim.cmp.confirm({ select = true }),
-        ["<S-CR>"] = LazyVim.cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ["<S-CR>"] = LazyVim.cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace }),
         ["<C-CR>"] = function(fallback)
           cmp.abort()
           fallback()
         end,
-        ["<tab>"] = function(fallback)
-          return LazyVim.cmp.map({ "snippet_forward", "ai_accept" }, fallback)()
-        end,
+        ["<Tab>"] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.confirm({ select = true })
+          elseif luasnip.expand_or_jumpable() then
+            luasnip.expand_or_jump()
+          elseif has_words_before() then
+            cmp.complete()
+          else
+            fallback()
+          end
+        end, { "i", "s" }),
+        ["<S-Tab>"] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.select_prev_item()
+          elseif luasnip.jumpable(-1) then
+            luasnip.jump(-1)
+          else
+            fallback()
+          end
+        end, { "i", "s" }),
       }),
+
       sources = cmp.config.sources({
         { name = "nvim_lsp", priority = 1000, group_index = 0 },
         { name = "supermaven", priority = 750 },
