@@ -27,6 +27,7 @@ create_symlink "$DOTFILES/.nvm" "$HOME/.nvm"
 create_symlink "$DOTFILES/fastfetch" "$XDG_CONFIG_HOME/fastfetch"
 create_symlink "$DOTFILES/zsh/.zshenv" "$HOME/.zshenv"
 create_symlink "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
+create_symlink "$DOTFILES/spicetify" "$XDG_CONFIG_HOME/spicetify"
 
 # Install Rust and Cargo
 if ! command -v cargo &>/dev/null; then
