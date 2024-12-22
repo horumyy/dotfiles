@@ -3,7 +3,9 @@
     "lazyvim.plugins.extras.coding.nvim-cmp",
     "lazyvim.plugins.extras.editor.telescope",
     "lazyvim.plugins.extras.lang.markdown",
-    "lazyvim.plugins.extras.ui.treesitter-context"
+    "lazyvim.plugins.extras.lang.toml",
+    "lazyvim.plugins.extras.ui.treesitter-context",
+    "lazyvim.plugins.extras.vscode"
   ],
   "news": {
     "NEWS.md": "10960",
