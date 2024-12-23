@@ -48,14 +48,8 @@ yabai -m config external_bar all:$(sketchybar --query bar | jq .height):0
 # default layout (can be bsp, stack or float)
 yabai -m config layout bsp
 
-# Global window opacity settings (in case you want other windows to behave differently)
+# Global window opacity settings
 yabai -m config normal_window_opacity 0.90
-
-# Make VS Code transparent at all times (both focused and unfocused)
-
-# yabai -m config window_opacity on
-# yabai -m config active_window_opacity 1.0
-# Enable window opacity
 
 yabai -m config window_opacity on
 
