@@ -28,6 +28,7 @@ alias ls='ls -G'
 alias neofetch='fastfetch --wm-detect-plugin'
 alias fastfetch='fastfetch --wm-detect-plugin'
 alias yabaii='~/.config/yabai/yabairc && yabai --restart-service'
+alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 
 tmux-save() {
   ~/.config/zsh/tmux-session-manager.sh save
