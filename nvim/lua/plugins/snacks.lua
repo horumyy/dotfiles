@@ -5,6 +5,7 @@ return {
   opts = {
     bigfile = { enabled = true },
     bufdelete = { enabled = false },
+    scroll = { enabled = false },
     dashboard = { enabled = false },
     debug = { enabled = false },
     git = { enabled = false },
