@@ -5,9 +5,10 @@
     "lazyvim.plugins.extras.lang.markdown",
     "lazyvim.plugins.extras.ui.treesitter-context"
   ],
+  "install_version": 7,
   "news": {
     "NEWS.md": "10960",
-    "doc/news.txt": "24450"
+    "doc/news.txt": "24170"
   },
-  "version": 7
+  "version": 8
 }

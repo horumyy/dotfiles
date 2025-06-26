@@ -89,13 +89,22 @@ return {
           margin = { horizontal = 0 },
         },
         render = function(props)
-          local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
+          local bufname = vim.api.nvim_buf_get_name(props.buf)
+          local filename = vim.fn.fnamemodify(bufname, ":t")
           local ft_icon, ft_color = require("nvim-web-devicons").get_icon_color(filename)
           local modified = vim.bo[props.buf].modified
+          
+          -- Check if it's a TypeScript/TSX file and format like VSCode
+          local display_name = filename
+          if filename:match("%.tsx?$") then
+            local dirname = vim.fn.fnamemodify(bufname, ":h:t")
+            display_name = dirname .. "/" .. filename
+          end
+          
           local buffer = {
             ft_icon and { " ", ft_icon, " ", guibg = ft_color, guifg = helpers.contrast_color(ft_color) } or "",
             " ",
-            { filename, gui = modified and "bold,italic" or "bold" },
+            { display_name, gui = modified and "bold,italic" or "bold" },
             " ",
             guibg = "#363944",
           }
